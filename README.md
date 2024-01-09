@@ -10,6 +10,4 @@
 
 ## Components:
 
-## Snap Scroll:
-
 ## Framer Motion notes:

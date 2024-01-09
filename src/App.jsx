@@ -1,3 +1,4 @@
+import "./app.scss";
 import Cursor from "./components/cursor/Cursor";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";

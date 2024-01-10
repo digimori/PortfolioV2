@@ -6,20 +6,33 @@ const Tester = () => {
 
   //Variants:
   const variants = {
-    visible: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      x: 100,
+      transition: { staggerChilden: 0.2 },
+    },
     hidden: { opacity: 0 },
   };
+  const items = ["item1", "item2", "item3"];
 
   return (
     <div className="course">
-      <motion.div
+      {/* <motion.div
         className="box"
         transition={{ duration: 2 }}
         variants={variants}
         animate={open ? "visible" : "hidden"}
-      ></motion.div>
+  ></motion.div>
 
-      <button onClick={() => setOpen((prev) => !prev)}>Click me</button>
+      <button onClick={() => setOpen((prev) => !prev)}>Click me</button>*/}
+
+      <motion.ul initial="hidden" animate="visible" variants={variants}>
+        {items.map((item, i) => (
+          <motion.li variants={variants} key={item} custom={i}>
+            {item}
+          </motion.li>
+        ))}
+      </motion.ul>
     </div>
   );
 };

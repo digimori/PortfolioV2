@@ -92,3 +92,30 @@ const [open, setOpen] = useState(false);
 // On click event to switch state example (prev=>!prev is equivalent to saying "If true, set to false and vice versa):
 <button onClick={() => setOpen(prev=>!prev)}>Click</button>
 ```
+
+- List examples:
+
+```
+const variants = {
+    visible: {
+      opacity: 1,
+      x: 100,
+      transition: { staggerChilden: 0.2 }, // This will stagger each child in the list that we are about to render, so each will become visible one after another at 0.2s
+    },
+    hidden: { opacity: 0 },
+  };
+  const items = ["item1", "item2", "item3"];
+
+
+// Mapped over list:
+<motion.ul initial="hidden" animate="visible" variants={variants}>
+        {items.map((item,i) => (
+          <motion.li variants={variants} key={item} custom={i}>
+            {item}
+          </motion.li>
+        ))}
+      </motion.ul>
+    </div>
+
+
+```

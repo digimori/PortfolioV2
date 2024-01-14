@@ -1,0 +1,17 @@
+.portfolio__container {
+  position: relative;
+
+  .portfolio__progressbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 2rem;
+    .portfolio__progressbar-animation {
+      height: 10px;
+      background-color: #fff;
+    }
+  }
+}

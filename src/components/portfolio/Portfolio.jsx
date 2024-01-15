@@ -29,7 +29,7 @@ const projects = [
   },
 ];
 
-const Single = ({ item }) => {
+const Single = ({ img, title, desc }) => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -75,7 +75,12 @@ const Portfolio = () => {
         ></motion.div>
       </div>
       {projects.map((item, index) => (
-        <Single item={item} key={item.id} />
+        <Single
+          title={item.title}
+          img={item.img}
+          desc={item.desc}
+          key={item.id}
+        />
       ))}
     </div>
   );
